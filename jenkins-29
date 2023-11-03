@@ -1,25 +1,28 @@
-pipeline {
-agent {label 'master'}
+pipeline{
+agent{label 'master'}
 
- tools {
+tools{
     jdk 'java'
     maven 'maven'
-  }
-stages{
-   stage('Git clone'){
-       steps{
-        git branch: 'main',
-        url: 'https://github.com/chinni4321/helloworld-project-1.git'
+}
 
-       }
+stages{
+    stage('gitclone'){
+        steps{
+        git branch: 'main',
+        url: 'https://github.com/chinni4321/helloworld.git'
+            
+       
+        }
     }
 
-   stage('Maven build'){
-       steps{
-           sh 'mvn clean package'
-
-       }
-     }
-
- }
+    stage('maven build'){
+        steps{
+            sh 'mvn clean package'
+            
+            
+        }
+    }
+   
+}
 }
