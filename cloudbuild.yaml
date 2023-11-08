@@ -7,7 +7,7 @@ steps:
   dir: 'game-of-life/gameoflife-build/'
   # build the container image
 - name: "gcr.io/cloud-builders/docker"
-  args: ["build", "-t", "gcr.io/theta-signal-403802/helloworld:v5", "."]
+  args: ["build", "-t", "gcr.io/theta-signal-403802/helloworld:v1", "."]
   # push container image
 - name: "gcr.io/cloud-builders/docker"
-  args: ["push", "gcr.io/theta-signal-403802/helloworld:v5"]
+  args: ["push", "gcr.io/theta-signal-403802/helloworld:v1"]
