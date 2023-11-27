@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: gcr.io/theta-signal-403802/helloworld-1:latest
+        image: gcr.io/theta-signal-403802/helloworld:latest
         ports:
         - containerPort: 80
         - containerPort: 443
